@@ -1,0 +1,6 @@
+function createPeg(){
+
+}
+function getRandomColor(){
+	
+}

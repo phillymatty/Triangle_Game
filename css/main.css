@@ -1,0 +1,90 @@
+/* 
+	Triangle CSS 
+	Copyright:Matthew Smith;
+ */
+ .board{
+ 	position: relative;
+ 	width: 0px; 
+   height: 0; 
+   border-bottom: 420px solid #A8D8F0; 
+   border-left: 210px solid transparent; 
+   border-right: 210px solid transparent; 
+   margin: 0 auto;
+ }
+.pegHoleContainer{
+	width: 80px;
+	height: 80px;
+	float: left;	
+	position: relative;
+	right: 0px;
+}
+.pegRow{
+	height: 80px;
+	width: 400px;
+	margin:0 auto;
+	
+}
+.triangle{
+	position: absolute;
+	top: 0;
+	left: -200px;
+}
+
+#pegHoleContainer0-0{
+	margin-left: 160px;
+}
+#pegHoleContainer1-0{
+	margin-left: 120px;
+}
+#pegHoleContainer2-0{
+	margin-left: 80px;
+}
+#pegHoleContainer3-0{
+	margin-left:40px;
+}
+.pegHole,.peg{
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	top: 40px;
+	left:20px;
+}
+.pegHole{
+	
+	background-color: #fff;
+
+}
+.peg{
+	z-index: 10;
+	background-color: #2554C7;
+}
+.over{
+	background-color: #900;
+}
+.gameOver{
+	display: none;
+	background-color: rgba(51,51,51,0.7);
+	z-index: 100;
+	width: 420px; 
+   height: 420px;
+   position: absolute;
+   left:-210px;
+}
+.messages{
+
+	width: 80%;
+	height: 80%;
+	margin: 10% auto;
+	text-align: center;
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
