@@ -19,7 +19,8 @@ BoardView.prototype.getPegHoleContainerHTML = function(pegHoleContainer){
 BoardView.prototype.getRowHTML = function(rowNum){
 		return "<div class=\"pegRow\" id = \"pegRow" + rowNum + "\"></div>";
 };
-BoardView.prototype.setNewBoard = function (){
+BoardView.prototype.setNewBoard = function (color){ //john param addition
+	$(".triangle").empty(); //john addition
 	for (var i = 0;i < this.model.model.length; i++) {
 		var rowNum = i + 1;
 		$('.triangle').append(this.getRowHTML(rowNum));
@@ -28,7 +29,11 @@ BoardView.prototype.setNewBoard = function (){
 		}
 	}
 	$(".pegRow").each(function(index,element){
-		colors = ["#4878A8","#F07830","#781800"];
+		if(typeof randomColor !== 'undefined' && typeof color !== 'undefined') { //john addition
+			colors = randomColor({count: 3, hue: color,});
+		} else {
+			colors = ["#4878A8","#F07830","#781800"];
+		}
 		var randomNumber =  Math.floor(Math.random() * colors.length);
 		$(element).find(".peg").css({"background-color" : colors[randomNumber]});});
 	$(".peg").draggable({revert:"invalid",revertDuration:200,snap:".pegHole",snapMode:"inner",snapTolerance:19});
