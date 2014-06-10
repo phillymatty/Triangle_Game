@@ -7,6 +7,7 @@ function newGame(sizeOfBoard, theColor){
 }
 $(document).ready(function(){
 	newGame(5);
+    alert('hello');
 	$('.colorPicker').change(function(){
 		theColor = $(this).val().toLowerCase();
 		if(theColor == 'choose color' || theColor == '') {
